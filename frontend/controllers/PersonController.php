@@ -71,12 +71,48 @@ class PersonController extends Controller
         $model = new Person();
 
         if ($model->load(Yii::$app->request->post()) && $model->save()) {
-//            print_r(Yii::$app->request->post());exit;
+            /**
+             *
+             * Array
+             * (
+             * [_csrf-frontend] => Ri1nczFicXMiSwMZeAQpBSkeAAZ8BCY/fks0FVs1LjkOSjQKCBNCHQ==
+             * [Person] => Array
+             * (
+             * [type] => 个人
+             * [cityname] => 150100=呼和浩特市
+             * [realname] => qw
+             * [mobile] => 180
+             * [email] => qw@qq.com
+             * [password] => qw
+             * [personid] => 180
+             * [business] => 1
+             * [personpica] => /upload/image/20161107/1478513877173288.png
+             * [personpicb] => /upload/image/20161107/1478513914515305.jpg
+             * [person_id_timestar] =>
+             * [person_id_timeend] =>
+             * [person_id_andheadpic] => /upload/image/20161107/1478513920640011.png
+             * [person_halfbody] =>
+             * [trademark] =>
+             * [brand_certificate] =>
+             * [qc_report] =>
+             * [shopname] => qw
+             * [shoplogo] => /upload/image/20161107/1478513927921525.png
+             * [address] => qw
+             * [shopinfo] =>
+             * [zhifubaoaccount] =>
+             * [invitation] =>
+             * [alreadyRed] => 1
+             * )
+             *
+             * )
+             */
+//            print_r(Yii::$app->request->post());
+//            exit;
             $Person = $model->toArray();
 //            var_dump($Person);
-//            die();
+//            exit('拦截');
 //            $urlApi = 'http://www.pp.cms/person/receive';
-           $urlApi = 'http://twx.pingoing.cn/ajax/CreatShopShenqing';
+            $urlApi = 'http://twx.pingoing.cn/ajax/CreatShopShenqing';
             $ch = curl_init();
             curl_setopt($ch, CURLOPT_URL, $urlApi);
             curl_setopt($ch, CURLOPT_TIMEOUT, 5);
@@ -87,7 +123,7 @@ class PersonController extends Controller
             $response = curl_exec($ch);
             curl_close($ch);
             print_r($response);  //打印结果
-die();
+            die();
             return $this->redirect(['wait', 'id' => $model->id]);
         } else {
             return $this->render('create', [

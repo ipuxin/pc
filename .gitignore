@@ -2,6 +2,9 @@
 Thumbs.db
 ehthumbs.db
 
+#cache
+frontend/runtime
+
 # Folder config file
 Desktop.ini
 
