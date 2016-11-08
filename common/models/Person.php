@@ -36,6 +36,9 @@ use Yii;
  */
 class Person extends \yii\db\ActiveRecord
 {
+    /**
+     * 已阅读
+     */
     public $alreadyRed = false;
     /**
      * 邀请码

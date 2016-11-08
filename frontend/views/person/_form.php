@@ -76,9 +76,7 @@ $form = ActiveForm::begin([
 
 <div class="form-group field-person-cityname required">
     <label class="col-lg-3 control-label text-right" for="person-cityname">所在城市</label>
-    <div class="  formControls col-lg-5     ">
-
-
+    <div class="  formControls col-lg-5">
         <select id="selProvince" onChange="getCity(this.options[this.selectedIndex].value)" class="form-control"
                 name="Person[cityname]">
             <option value="">-请选择-</option>
@@ -215,12 +213,11 @@ $form = ActiveForm::begin([
 <?= $form->field($model, 'zhifubaoaccount')->textInput(['maxlength' => true]) ?>
 <?= $form->field($model, 'invitation')->textInput(['maxlength' => true]) ?>
 
-<div class="layer">
-    <div class="protocolCon">
-        <?= Html::a('《拼一下商城入驻协议书》', ['page/protocol'], ['id'=>'alreadyRedA']) ?>
-        <?= $form->field($model, 'alreadyRed')->checkbox(['id' => 'alreadyRedBtn'])->label('',['style'=>'color:red']) ?>
-    </div>
+<div class="form-group">
+            <?= $form->field($model, 'alreadyRed')->checkbox(['id' => 'alreadyRedBtn'])->label('', ['style' => 'color:red']) ?>
+            <?= Html::a('《拼一下商城入驻协议书》', ['page/protocol'], ['id' => 'alreadyRedA']) ?>
 </div>
+
 
 <div class="form-group row clearfix text-center">
     <?= Html::submitButton($model->isNewRecord ? Yii::t('app', '下一步') : Yii::t('app', '更新'), ['disabled' => 'false', 'id' => 'nextPerson', 'class' => $model->isNewRecord ? 'btn   pdd-danger  submit-btn' : 'btn   pdd-danger  submit-btn']) ?>
@@ -251,33 +248,23 @@ $form = ActiveForm::begin([
     }
 </script>
 <style>
-    .layer {
-        float: left;
-        width: 100%;
+    @media (min-width: 1200px) {
+        #alreadyRedA {
+            float: left;
+            margin-left: 451px;
+            margin-top: -52px;
+        }
+    }
+    @media (max-width: 1200px) {
+        #alreadyRedA {
+            float: left;
+            margin-top: -20px;
+        }
     }
 
-    .alreadyRed {
-        float: left;
-        margin-left: 500px;
-        width: 207px;
-        margin-top: 10px;
-    }
+    #alreadyRedA {
 
-    .protocolCon {
-        /*margin-left: 459px;*/
-    }
-    .protocolCon label{
-        margin-top: -21px;
-        margin-left: 287px;
-        font-weight: normal;
-        width: 166px;
-        float: left;
-    }
-    #alreadyRedA{
-        float: left;
-        /*margin-top: -52px;*/
-        margin-left: 449px;
-        color:red;
+        color: red;
     }
 </style>
 

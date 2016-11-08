@@ -48,7 +48,14 @@ use Yii;
  */
 class Seller extends \yii\db\ActiveRecord
 {
+    /**
+     * 已阅读
+     */
     public $alreadyRed = false;
+    /**
+     * 邀请码
+     */
+    public $invitation;
 
     /**
      * @inheritdoc
@@ -84,6 +91,7 @@ class Seller extends \yii\db\ActiveRecord
     public function attributeLabels()
     {
         return [
+            'invitation'=>'邀请码',
             'alreadyRed'=>'我已认真阅读并同意',
             'id' => Yii::t('shop', 'ID'),
             'username' => Yii::t('shop', 'username'),

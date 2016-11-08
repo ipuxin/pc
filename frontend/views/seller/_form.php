@@ -229,11 +229,11 @@ $form = ActiveForm::begin([
 
 
 <?php echo $form->field($model, 'zhifubaoaccount')->textInput(['maxlength' => true]) ?>
-<div class="layer">
-    <div class="protocolCon">
-        <?= Html::a('《拼一下商城入驻协议书》', ['page/protocol'], ['id'=>'alreadyRedA']) ?>
-        <?= $form->field($model, 'alreadyRed')->checkbox(['id' => 'alreadyRedBtn'])->label('',['style'=>'color:red']) ?>
-    </div>
+<?= $form->field($model, 'invitation')->textInput(['maxlength' => true]) ?>
+
+<div class="form-group">
+    <?= $form->field($model, 'alreadyRed')->checkbox(['id' => 'alreadyRedBtn'])->label('', ['style' => 'color:red']) ?>
+    <?= Html::a('《拼一下商城入驻协议书》', ['page/protocol'], ['id' => 'alreadyRedA']) ?>
 </div>
 <?php // echo $form->field($model, 'status')->textInput() ?>
 
@@ -256,45 +256,35 @@ $form = ActiveForm::begin([
         var nextPerson = document.getElementById('nextPerson');
         alreadyRedBtn.onclick = function () {
             var selCity = $('#selCity').val();
-
+            if (selCity == '') {
+                alert('请填写所在城市');
+                nextPerson.disabled = false;
+            }
             if (alreadyRedBtn.checked) {
                 nextPerson.disabled = false;
             } else {
                 nextPerson.disabled = true;
             }
-            if (selCity == '') {
-                alert('请填写所在城市');
-            }
         }
     }
 </script>
 <style>
-    .layer {
-        float: left;
-        width: 100%;
+    @media (min-width: 1200px) {
+        #alreadyRedA {
+            float: left;
+            margin-left: 451px;
+            margin-top: -52px;
+        }
+    }
+    @media (max-width: 1200px) {
+        #alreadyRedA {
+            float: left;
+            margin-top: -20px;
+        }
     }
 
-    .alreadyRed {
-        float: left;
-        margin-left: 500px;
-        width: 207px;
-        margin-top: 10px;
-    }
+    #alreadyRedA {
 
-    .protocolCon {
-        /*margin-left: 459px;*/
-    }
-    .protocolCon label{
-        margin-top: -21px;
-        margin-left: 287px;
-        font-weight: normal;
-        width: 166px;
-        float: left;
-    }
-    #alreadyRedA{
-        float: left;
-        /*margin-top: -52px;*/
-        margin-left: 449px;
-        color:red;
+        color: red;
     }
 </style>
