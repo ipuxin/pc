@@ -46206,3 +46206,121 @@ $_SERVER = [
     'REQUEST_TIME_FLOAT' => 1478516164.047
     'REQUEST_TIME' => 1478516164
 ]
+2016-11-08 21:53:41 [127.0.0.1][-][-][error][yii\db\Exception] exception 'yii\base\ErrorException' with message 'PDO::__construct(): ' in C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 [internal function]: yii\base\ErrorHandler->handleError(2, 'PDO::__construc...', 'C:\\software\\PHP...', 603, Array)
+#1 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php(603): PDO->__construct('mysql:host=cat6...', 'u119591', 'KMko5x9f', NULL)
+#2 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#3 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#4 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#5 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#6 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#7 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#8 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#9 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#10 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#11 C:\software\PHPStudy\WWW\phpstorm\pc\frontend\views\site\index.php(5): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#12 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\View.php(325): require('C:\\software\\PHP...')
+#13 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#14 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#15 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#16 C:\software\PHPStudy\WWW\phpstorm\pc\frontend\controllers\SiteController.php(85): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#17 [internal function]: frontend\controllers\SiteController->actionIndex()
+#18 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#19 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#20 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#21 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#22 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#23 C:\software\PHPStudy\WWW\phpstorm\pc\wwwroot\index.php(24): yii\base\Application->run()
+#24 {main}
+
+Next exception 'PDOException' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: 这是在主机名解析时通常出现的暂时错误，它意味着本地服务器没有从权威服务器上收到响应。 ' in C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php:603
+Stack trace:
+#0 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php(0): PDO->__construct()
+#1 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php(545): yii\db\Connection->createPdoInstance()
+#2 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#3 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#4 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#5 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#6 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#7 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#8 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#9 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#10 C:\software\PHPStudy\WWW\phpstorm\pc\frontend\views\site\index.php(5): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#11 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\View.php(325): require('C:\\software\\PHP...')
+#12 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#13 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#14 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#15 C:\software\PHPStudy\WWW\phpstorm\pc\frontend\controllers\SiteController.php(85): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#16 [internal function]: frontend\controllers\SiteController->actionIndex()
+#17 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#18 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#19 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#20 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#21 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#22 C:\software\PHPStudy\WWW\phpstorm\pc\wwwroot\index.php(24): yii\base\Application->run()
+#23 {main}
+
+Next exception 'yii\db\Exception' with message 'SQLSTATE[HY000] [2002] php_network_getaddresses: getaddrinfo failed: 这是在主机名解析时通常出现的暂时错误，它意味着本地服务器没有从权威服务器上收到响应。 ' in C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php:550
+Stack trace:
+#0 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php(864): yii\db\Connection->open()
+#1 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Connection.php(851): yii\db\Connection->getMasterPdo()
+#2 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Command.php(219): yii\db\Connection->getSlavePdo()
+#3 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Command.php(894): yii\db\Command->prepare('<span class="ke...')
+#4 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Command.php(376): yii\db\Command->queryInternal('<span class="st...', '<span class="ke...')
+#5 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\Query.php(247): yii\db\Command->queryOne()
+#6 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\ActiveQuery.php(295): yii\db\Query->one('<span class="ke...')
+#7 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\db\BaseActiveRecord.php(107): yii\db\ActiveQuery->one()
+#8 C:\software\PHPStudy\WWW\phpstorm\pc\frontend\views\site\index.php(5): yii\db\BaseActiveRecord::findOne('[<span class="s...')
+#9 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\View.php(325): require('C:\\software\\PHP...')
+#10 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\View.php(247): yii\base\View->renderPhpFile('<span class="st...', '[<span class="s...')
+#11 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\View.php(149): yii\base\View->renderFile('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#12 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\Controller.php(378): yii\base\View->render('<span class="st...', '[<span class="s...', Object(frontend\controllers\SiteController))
+#13 C:\software\PHPStudy\WWW\phpstorm\pc\frontend\controllers\SiteController.php(85): yii\base\Controller->render('<span class="st...', '[<span class="s...')
+#14 [internal function]: frontend\controllers\SiteController->actionIndex()
+#15 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\InlineAction.php(55): call_user_func_array('[<span class="t...', '[]')
+#16 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\Controller.php(154): yii\base\InlineAction->runWithParams('[]')
+#17 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\Module.php(454): yii\base\Controller->runAction('<span class="st...', '[]')
+#18 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\web\Application.php(87): yii\base\Module->runAction('<span class="st...', '[]')
+#19 C:\software\PHPStudy\WWW\phpstorm\pc\vendor\yiisoft\yii2\base\Application.php(375): yii\web\Application->handleRequest(Object(yii\web\Request))
+#20 C:\software\PHPStudy\WWW\phpstorm\pc\wwwroot\index.php(24): yii\base\Application->run()
+#21 {main}
+Additional Information:
+
+2016-11-08 21:53:40 [127.0.0.1][-][-][info][application] $_SERVER = [
+    'HTTP_HOST' => 'pc.pingoing.com'
+    'HTTP_CONNECTION' => 'keep-alive'
+    'HTTP_CACHE_CONTROL' => 'max-age=0'
+    'HTTP_ACCEPT' => 'text/html,application/xhtml+xml,application/xml;q=0.9,image/webp,*/*;q=0.8'
+    'HTTP_UPGRADE_INSECURE_REQUESTS' => '1'
+    'HTTP_USER_AGENT' => 'Mozilla/5.0 (Windows NT 10.0; WOW64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/50.0.2661.102 UBrowser/5.7.16400.12 Safari/537.36'
+    'HTTP_ACCEPT_ENCODING' => 'gzip, deflate'
+    'HTTP_ACCEPT_LANGUAGE' => 'zh-CN,zh;q=0.8,en;q=0.6'
+    'PATH' => 'C:\\ProgramData\\Oracle\\Java\\javapath;C:\\Program Files (x86)\\Intel\\iCLS Client\\;C:\\Program Files\\Intel\\iCLS Client\\;C:\\Windows\\system32;C:\\Windows;C:\\Windows\\System32\\Wbem;C:\\Windows\\System32\\WindowsPowerShell\\v1.0\\;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\DAL;C:\\Program Files (x86)\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files\\Intel\\Intel(R) Management Engine Components\\IPT;C:\\Program Files (x86)\\NVIDIA Corporation\\PhysX\\Common;C:\\Program Files\\TortoiseSVN\\bin;C:\\Program Files (x86)\\VisualSVN\\bin;C:\\wamp64\\bin\\php\\php5.6.25;C:\\ProgramData\\ComposerSetup\\bin;C:\\Program Files\\Git\\cmd;C:\\WINDOWS\\system32;C:\\WINDOWS;C:\\WINDOWS\\System32\\Wbem;C:\\WINDOWS\\System32\\WindowsPowerShell\\v1.0\\;C:\\Users\\瓒匼\AppData\\Roaming\\Composer\\vendor\\bin;C:\\Users\\瓒匼\AppData\\Local\\Microsoft\\WindowsApps;'
+    'SystemRoot' => 'C:\\WINDOWS'
+    'COMSPEC' => 'C:\\WINDOWS\\system32\\cmd.exe'
+    'PATHEXT' => '.COM;.EXE;.BAT;.CMD;.VBS;.VBE;.JS;.JSE;.WSF;.WSH;.MSC'
+    'WINDIR' => 'C:\\WINDOWS'
+    'SERVER_SIGNATURE' => ''
+    'SERVER_SOFTWARE' => 'Apache/2.4.23 (Win32) OpenSSL/1.0.2j PHP/5.4.45'
+    'SERVER_NAME' => 'pc.pingoing.com'
+    'SERVER_ADDR' => '127.0.0.1'
+    'SERVER_PORT' => '80'
+    'REMOTE_ADDR' => '127.0.0.1'
+    'DOCUMENT_ROOT' => 'C:/software/PHPStudy/WWW/phpstorm/pc/wwwroot'
+    'REQUEST_SCHEME' => 'http'
+    'CONTEXT_PREFIX' => ''
+    'CONTEXT_DOCUMENT_ROOT' => 'C:/software/PHPStudy/WWW/phpstorm/pc/wwwroot'
+    'SERVER_ADMIN' => 'admin@phpStudy.net'
+    'SCRIPT_FILENAME' => 'C:/software/PHPStudy/WWW/phpstorm/pc/wwwroot/index.php'
+    'REMOTE_PORT' => '8308'
+    'GATEWAY_INTERFACE' => 'CGI/1.1'
+    'SERVER_PROTOCOL' => 'HTTP/1.1'
+    'REQUEST_METHOD' => 'GET'
+    'QUERY_STRING' => ''
+    'REQUEST_URI' => '/'
+    'SCRIPT_NAME' => '/index.php'
+    'PHP_SELF' => '/index.php'
+    'REQUEST_TIME_FLOAT' => 1478613220.463
+    'REQUEST_TIME' => 1478613220
+]
