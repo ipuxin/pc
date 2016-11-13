@@ -1,0 +1,162 @@
+.top1V2 {
+    background: #fe5164;
+}
+
+.top1V2 .nav > li > a {
+    color: #fff;
+}
+
+.navbar-brandV2 img {
+    width: 173px;
+    float: left;
+    margin-top: 20px;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+    text-decoration: none;
+    background: url('../images/ind_nav_bg.png') bottom center no-repeat;
+}
+
+.navbar-header > .navbar-toggle span {
+    color: #fff !important;
+}
+
+.bd1 {
+    border: 1px solid #000;
+}
+
+.lc-show ul {
+    margin: 0 auto;
+}
+
+.lc-show ul li a {
+    display: block;
+    width: 95%;
+    max-width: 239px;
+    margin: 0 auto;
+    color: #666;
+}
+
+.lc-show ul li {
+    float: left;
+    width: 25%;
+}
+
+.lc-show p {
+    text-align: center;
+    font-size: 18px;
+    padding-top: 20px;
+    margin-top: -50px;
+}
+/*自适应标题*/
+.ind-tit-box-a{
+    margin-top: 10px;
+}
+.ind_tita {
+    font-size: 30px;
+    text-align: center;
+}
+
+.ind-tit-line-l {
+    float: left;
+    border-bottom: 1px solid #000;
+    width: 90%;
+    margin-top: 22px;
+}
+
+.ind-tit-dot-l {
+    float: left;
+    margin-top: 17px;
+    width: 30px;
+    height: 10px;
+    background: #000;
+}
+
+.ind-tit-line-r {
+    float: right;
+    border-bottom: 1px solid #000;
+    width: 90%;
+    margin-top: 22px;
+}
+
+.ind-tit-dot-r {
+    float: right;
+    margin-top: 17px;
+    width: 30px;
+    height: 10px;
+    background: #000;
+}
+/**自适应标题*/
+
+/*md-中等桌面*/
+@media (max-width: 1200px) {
+    .top1 .navbar-nav > li > a {
+        height: 90px;
+        padding: 50px 24px 15px;
+        margin-top: 15px;
+    }
+
+    .lc-show p {
+        text-align: center;
+        font-size: 18px;
+        padding-top: 20px;
+    }
+}
+
+/*sm-中等屏幕-平板*/
+@media (max-width: 992px) {
+    .lc-show p {
+        text-align: center;
+        font-size: 13px;
+        padding-top: 20px;
+        margin-top: -43px;
+    }
+
+    .ind-tit-line-l {
+        width: 85%;
+    }
+
+    .ind-tit-line-r {
+        width: 85%;
+    }
+}
+
+/*xs,手机-小于768px*/
+@media (max-width: 768px) {
+    .lc-show p {
+        text-align: center;
+        font-size: 13px;
+        padding-top: 20px;
+        margin-top: -43px;
+    }
+
+    .ind-tit-line-l {
+        width: 65%;
+    }
+
+    .ind-tit-line-r {
+        width: 65%;
+    }
+
+    .ind_tita{
+        font-size:26px;
+    }
+    .ind-tit-dot-l {
+        float: left;
+        margin-top: 20px;
+        width: 20px;
+        height: 5px;
+    }
+    .ind-tit-dot-r {
+        float: right;
+        margin-top: 20px;
+        width: 20px;
+        height: 5px;
+    }
+}
+
+
+
+
+

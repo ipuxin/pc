@@ -18,6 +18,7 @@ class AppAsset extends AssetBundle
 		'css/style.css',
 		'css/shop.css',
 		'css/bootstrap-datetimepicker.css',
+        'css/styleV2.css',
     ];
     public $js = [
 	'js/jquery-3.1.0.min.js',
